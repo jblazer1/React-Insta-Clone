@@ -5,7 +5,6 @@ const Comment = props => {
     <>
       {props.comment.comments.map((comment, index) => (
         <div>
-          console.log(comment);
           {comment.username} {comment.text}
         </div>
       ))}
