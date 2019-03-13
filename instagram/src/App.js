@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App-container">
         <SearchBar />
         <PostContainer post={this.state.dummyData} />
-        <CommentSection comments={this.state.dummyData.comments} />
+        <CommentSection comments={this.state.dummyData} />
       </div>
     );
   }
