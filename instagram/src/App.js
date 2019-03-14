@@ -18,8 +18,14 @@ class App extends Component {
     return (
       <div className="App-container">
         <SearchBar />
-        <PostContainer post={this.state.dummyData} />
-        <CommentSection comments={this.state.dummyData} />
+        {this.state.dummyData.map(entry => {
+          return (
+            <>
+              <PostContainer key={entry.username} post={entry} />{" "}
+              <CommentSection comments={entry.comments} />
+            </>
+          );
+        })}
       </div>
     );
   }
