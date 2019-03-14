@@ -1,15 +1,18 @@
 import React from "react";
+import "./commentsection.css";
 
 const Comment = props => {
-  console.log(props.comments);
   return (
-    <>
-      {props.comment.comments.map((comment, index) => (
-        <div>
-          {comment.username} {comment.text}
-        </div>
-      ))}
-    </>
+    <div>
+      <form className="form">
+        <input
+          className="comment-input"
+          type="text"
+          name="comments"
+          placeholder="Add a comment"
+        />
+      </form>
+    </div>
   );
 };
 

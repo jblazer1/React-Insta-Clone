@@ -1,0 +1,12 @@
+.form {
+  border: 2px solid greenyellow;
+}
+
+.comment-input {
+  /* text-align: center; */
+  padding: 5px 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 20px;
+  border-top: 1px solid lightgray;
+}
