@@ -5,6 +5,7 @@ import "./App.css";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
+import PostLikes from "./components/PostContainer/PostLikes";
 import CommentSection from "./components/CommentSection/CommentSection";
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
         {this.state.dummyData.map(entry => {
           return (
             <>
-              <PostContainer key={entry.username} post={entry} />{" "}
+              <PostContainer key={entry.username} post={entry} /> <PostLikes />
               <CommentSection comments={entry.comments} />
             </>
           );

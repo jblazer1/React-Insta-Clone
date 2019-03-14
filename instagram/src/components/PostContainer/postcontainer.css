@@ -7,8 +7,28 @@
   flex-wrap: wrap;
 }
 
+.post-container .full-image {
+  width: 100%;
+}
+
 .thumbnail-image {
   border-radius: 100px;
   width: 50px;
   margin: 20px;
+}
+
+.comment-container {
+  border: 2px solid blue;
+}
+
+.comment-inner-container span {
+  font-weight: bold;
+}
+
+.post-likes {
+  margin: 5px 0;
+}
+
+.fa-comment {
+  transform: scaleX(-1);
 }
