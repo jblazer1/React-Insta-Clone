@@ -13,9 +13,13 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: dummyData,
+      dummyData: [],
       comments: "this is a comment"
     };
+  }
+
+  componentDidMount() {
+    this.setState({ dummyData: dummyData });
   }
   render() {
     return (
