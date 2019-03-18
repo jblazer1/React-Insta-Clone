@@ -12,6 +12,7 @@ const Comment = props => {
           placeholder="Add a comment"
           value={props.newComment}
           onChange={props.newCommentHandler}
+          onSubmit={props.addNewComment}
         />
       </form>
     </div>

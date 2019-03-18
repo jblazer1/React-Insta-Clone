@@ -9,9 +9,9 @@ class CommentSection extends React.Component {
     };
   }
 
-  // newCommentHandler = event => {
-  //   this.setState({ [event.target.name]: event.target.value });
-  // };
+  newCommentHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   addNewComment = (event, index) => {
     event.preventDefault();
@@ -31,7 +31,12 @@ class CommentSection extends React.Component {
     return (
       <div className="comment-container">
         {this.state.comments.map(comment => (
-          <div className="comment-inner-container" key={comment.id}>
+          <div
+            className="comment-inner-container"
+            key={comment.id}
+            newCommentHandler={this.newCommentHandler}
+            addNewComment={this.addNewComment}
+          >
             <p>
               <span>{comment.username}</span> {comment.text}
             </p>
