@@ -12,6 +12,7 @@ const SearchBar = props => {
           type="text"
           name="searchbar"
           placeholder="&#x1f50D; search here"
+          value=""
         />
       </form>
       <i className="far fa-compass" />

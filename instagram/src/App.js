@@ -13,8 +13,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: [],
-      comments: "this is a comment"
+      dummyData: []
+      // newComment: ""
     };
   }
 
@@ -31,7 +31,10 @@ class App extends Component {
               <PostContainer key={entry.username} post={entry} />
               <PostLikes post={entry} />
               <CommentSection comments={entry.comments} />
-              <Comment comments={this.state.comments} />
+              <Comment
+              // comments={this.state.comments}
+              // inputHandler={this.newCommentHandler}
+              />
             </>
           );
         })}
