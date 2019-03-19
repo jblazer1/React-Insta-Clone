@@ -4,7 +4,7 @@ import "./commentsection.css";
 const Comment = props => {
   return (
     <div>
-      <form className="form">
+      <form className="form" onSubmit={props.addNewComment}>
         <input
           className="comment-input"
           type="text"
@@ -12,7 +12,6 @@ const Comment = props => {
           placeholder="Add a comment"
           value={props.newComment}
           onChange={props.newCommentHandler}
-          onSubmit={props.addNewComment}
         />
       </form>
     </div>

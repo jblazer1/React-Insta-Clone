@@ -28,7 +28,7 @@ class App extends Component {
         {this.state.dummyData.map(entry => {
           return (
             <>
-              <PostContainer key={entry.username} post={entry} />
+              <PostContainer key={entry.id} post={entry} />
               <PostLikes post={entry} />
               <CommentSection comments={entry.comments} />
               <Comment
