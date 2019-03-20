@@ -1,50 +1,16 @@
 import React from "react";
 
-class CommentSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: props.comments,
-      newComment: ""
-    };
-  }
+import Comment from "./Comment";
 
-  newCommentHandler = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  addNewComment = (event, index) => {
-    event.preventDefault();
-    this.setState({
-      comments: [
-        ...this.state.comments,
-        {
-          text: this.state.newComment
-        }
-      ],
-      newComment: ""
-    });
-  };
-
-  render() {
-    console.log(this.state.comments);
-    return (
-      <div className="comment-container">
-        {this.state.comments.map(comment => (
-          <div
-            className="comment-inner-container"
-            key={comment.id}
-            newCommentHandler={this.newCommentHandler}
-            addNewComment={this.addNewComment}
-          >
-            <p>
-              <span>{comment.username}</span> {comment.text}
-            </p>
-          </div>
-        ))}
-      </div>
-    );
-  }
-}
+const CommentSection = props => {
+  // console.log(props.comment);
+  return (
+    <div className="comment-container">
+      {props.comments.map(comment => (
+        <Comment key={comment.id} comment={comment} />
+      ))}
+    </div>
+  );
+};
 
 export default CommentSection;
