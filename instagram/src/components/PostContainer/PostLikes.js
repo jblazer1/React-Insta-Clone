@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const PostLikes = props => {
   return (
@@ -11,3 +12,9 @@ const PostLikes = props => {
 };
 
 export default PostLikes;
+
+PostLikes.propTypes = {
+  post: PropTypes.shape({
+    likes: PropTypes.number
+  })
+};

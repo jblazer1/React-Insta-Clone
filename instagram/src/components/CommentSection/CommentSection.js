@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import Comment from "./Comment";
 
 const CommentSection = props => {
@@ -14,3 +14,7 @@ const CommentSection = props => {
 };
 
 export default CommentSection;
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object)
+};

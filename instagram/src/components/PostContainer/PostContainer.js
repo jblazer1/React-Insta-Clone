@@ -3,6 +3,7 @@ import React from "react";
 import "./postcontainer.css";
 import CommentSection from "../CommentSection/CommentSection";
 import PostLikes from "./PostLikes";
+import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
@@ -31,3 +32,11 @@ const PostContainer = props => {
 };
 
 export default PostContainer;
+
+PostContainer.propTypes = {
+  post: PropTypes.shape({
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.object)
+  })
+};

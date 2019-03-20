@@ -2,6 +2,7 @@
   /* border: 2px solid greenyellow; */
   display: flex;
   align-items: center;
+  border-bottom: 1px solid lightgray;
 }
 
 .insta-written-logo {
