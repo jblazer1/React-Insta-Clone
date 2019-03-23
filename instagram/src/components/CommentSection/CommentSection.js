@@ -29,8 +29,8 @@ class CommentSection extends React.Component {
         comments: [
           ...this.state.comments,
           {
-            username: this.state.username,
-            text: this.state.text
+            username: "NewUser",
+            text: this.state.newComment
           }
         ],
         newComment: ""
@@ -47,6 +47,7 @@ class CommentSection extends React.Component {
         <NewComment
           addNewComment={this.addNewComment}
           newCommentHandler={this.newCommentHandler}
+          newComment={this.state.newComment}
         />
       </div>
     );

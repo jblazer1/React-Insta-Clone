@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 
-import dummyData from "./dummy-data";
+import gobblygook from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 // import PostLikes from "./components/PostContainer/PostLikes";
@@ -13,20 +13,21 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData: []
-      // newComment: ""
+      gooklygobbly: [],
+      filteredData: []
     };
   }
 
   componentDidMount() {
-    this.setState({ dummyData: dummyData });
+    this.setState({ gooklygobbly: gobblygook, filteredData: gobblygook });
   }
+
   render() {
     return (
       <>
         <div className="App-container">
           <SearchBar />
-          {this.state.dummyData.map(entry => {
+          {this.state.gooklygobbly.map(entry => {
             return <PostContainer key={entry.id} post={entry} />;
           })}
         </div>
