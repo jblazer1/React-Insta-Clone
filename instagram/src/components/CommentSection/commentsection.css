@@ -1,0 +1,26 @@
+/* .form {
+  border: 2px solid greenyellow;
+}
+
+.comment-input {
+  padding: 5px 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 20px;
+  border-top: 1px solid lightgray;
+} */
+
+.comment-container {
+  /* border: 2px solid blue; */
+  padding-left: 20px;
+}
+
+.comment-inner-container {
+  /* border: solid 2px greenyellow; */
+  padding: 3px 0;
+}
+
+.comment-inner-container span {
+  font-weight: bold;
+  /* border: 2px solid hotpink; */
+}
